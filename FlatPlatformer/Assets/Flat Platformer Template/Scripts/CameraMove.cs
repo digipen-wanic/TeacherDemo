@@ -9,7 +9,7 @@ public class CameraMove : MonoBehaviour {
 
     private bool faceLeft;
     private int lastX;
-    private float dynamicSpeed;
+    private float dynamicSpeed = 0;
     private Camera _cam;
 
     void Start()

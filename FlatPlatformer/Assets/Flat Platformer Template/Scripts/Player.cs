@@ -20,19 +20,22 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rig;
     private Vector2 _inputAxis;
     private RaycastHit2D _hit;
+    private LayerMask _layerMask;
 
 	void Start ()
     {
+        _layerMask = LayerMask.GetMask("Default");
         rig = gameObject.GetComponent<Rigidbody2D>();
         _startScale = transform.localScale.x;
 	}
 
     void Update()
     {
-        if (_hit = Physics2D.Linecast(new Vector2(_GroundCast.position.x, _GroundCast.position.y + 0.2f), _GroundCast.position))
+        if (_hit = Physics2D.Linecast(new Vector2(_GroundCast.position.x, _GroundCast.position.y + 0.2f), _GroundCast.position, _layerMask))
         {
+            print(_hit.transform.tag);
             if (!_hit.transform.CompareTag("Player"))
-            {
+            { 
                 _canJump = true;
                 _canWalk = true;
             }
