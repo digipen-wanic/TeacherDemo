@@ -69,6 +69,7 @@
     <Compile Include="Assets\Flat Platformer Template\Scripts\DelayedSceneChange.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\FlyDeath.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Health.cs" />
+    <Compile Include="Assets\Flat Platformer Template\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Mantle.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\PathEnemy.cs" />
