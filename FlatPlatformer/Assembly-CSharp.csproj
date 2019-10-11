@@ -66,11 +66,13 @@
     <Compile Include="Assets\Flat Platformer Template\Scripts\ChangeLevelOnCollide.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\CreateEventFunction.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\DamageOnCollide.cs" />
+    <Compile Include="Assets\Flat Platformer Template\Scripts\DelayedSceneChange.cs" />
+    <Compile Include="Assets\Flat Platformer Template\Scripts\FlyDeath.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Health.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Mantle.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
+    <Compile Include="Assets\Flat Platformer Template\Scripts\PathEnemy.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Player.cs" />
-    <Compile Include="Assets\Flat Platformer Template\Scripts\SoundEventFunctions.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Sporge/Documents/GitHub/TeacherDemo/FlatPlatformer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

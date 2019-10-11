@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     public UnityEvent DamageFunctions;
     public UnityEvent DeathFunctions;
     public UnityEvent HealFunctions;
+    private bool DeathOccured = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +27,11 @@ public class Health : MonoBehaviour
     public void Damage( int damage)
     {
         CurrentHealth -= damage;
-        if (CurrentHealth <= 0)
+        if (CurrentHealth <= 0 && !DeathOccured)
         {
             CurrentHealth = 0;
             DeathFunctions.Invoke();
+            DeathOccured = true;
             if (DestroyAtZero)
             {
                 Destroy(gameObject);
