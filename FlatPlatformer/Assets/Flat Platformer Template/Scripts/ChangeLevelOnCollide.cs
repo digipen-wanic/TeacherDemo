@@ -6,28 +6,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class ChangeLevelOnCollide : MonoBehaviour
 {
     public string NextScene = "EndScene";
-    public AudioClip sfxDoor;
 
-    private AudioSource audioSource;
+    public float changeDelay = 0.2f;
+
+    public UnityEvent OnHit;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            audioSource.clip = sfxDoor;
-            audioSource.Play();
-            SceneManager.LoadScene(NextScene);
+            OnHit.Invoke();
+            StartCoroutine(ChangeSceneAfterDelay());
         }
+    }
+
+    IEnumerator ChangeSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(changeDelay);
+        SceneManager.LoadScene(NextScene);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
